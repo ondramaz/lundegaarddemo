@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
@@ -41,6 +42,13 @@ public class RequestController {
         requestService.save(request);
 
         model.addAttribute("requests", requestService.getRequestList());
-        return "index";
+        return "request-list";
+    }
+
+    // handler method for showing request list and link for adding a new request
+    @RequestMapping("/")
+    public String index(Model model) {
+        model.addAttribute("requests", requestService.getRequestList());
+        return "request-list";
     }
 }

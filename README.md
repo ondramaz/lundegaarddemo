@@ -4,7 +4,7 @@
 
 Download the application.
 ```
-git clone https://github.com/ondramaz/memsourcedemo.git  
+git clone https://github.com/ondramaz/lundergaarddemo.git  
 ```
 or download and unzip the archive 
 
@@ -18,7 +18,7 @@ Alternatively a docker image can be built and the application can run in a docke
 
 ```
 sudo ./mvnw spring-boot:build-image
-sudo docker run -p 8080:8080 memsourcedemo
+sudo docker run -p 8080:8080 lundergaarddemo
 ```
 
 ## Usage

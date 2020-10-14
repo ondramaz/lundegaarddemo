@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Requests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+<body>
+<div th:switch="${requests}" class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 th:case="null">No requests yet</h2>
+            <div th:case="*">
+                <h2 class="my-5">Request</h2>
+                <table class="table table-striped table-responsive-md">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Policy Number</th>
+                        <th>Kind of Request</th>
+                        <th>Request Text</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="request : ${requests}">
+                        <td th:text="${request.name}"></td>
+                        <td th:text="${request.surName}"></td>
+                        <td th:text="${request.policyNumber}"></td>
+                        <td th:text="${request.requestKind.optionText}"></td>
+                        <td th:text="${request.requestText}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="my-5"><a href="/show_add_request" class="btn btn-primary">Add Request</i></a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

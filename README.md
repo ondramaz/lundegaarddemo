@@ -24,3 +24,6 @@ sudo docker run -p 8080:8080 demo:1:0
 ## Usage
 
 Open http://localhost:8080/
+
+Application is also deployed on Heroku:
+https://hidden-scrubland-59999.herokuapp.com/

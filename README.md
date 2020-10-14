@@ -18,7 +18,7 @@ Alternatively a docker image can be built and the application can run in a docke
 
 ```
 sudo ./mvnw spring-boot:build-image
-sudo docker run -p 8080:8080 lundergaarddemo
+sudo docker run -p 8080:8080 demo:1:0
 ```
 
 ## Usage

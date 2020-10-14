@@ -1,4 +1,4 @@
-# Lundergaard demo
+# Lundegaard demo
 
 ## Installation
 
